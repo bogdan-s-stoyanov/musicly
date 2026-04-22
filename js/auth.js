@@ -31,5 +31,5 @@ function registerUser() {
   }
 
   alert("Account created successfully!");
-  window.location.href = "login.html";
+  window.location.href = "app.html";
 }

@@ -24,18 +24,38 @@ function renderSongs(songArray) {
       </div>
 
       <div class="song-controls-v2">
-        <button class="song-btn-v2" onclick="playSong('${song.audio}')">▶</button>
+        <button 
+          class="song-btn-v2 play-btn"
+          data-audio="${song.audio}"
+          data-title="${song.title}"
+          data-artist="${song.artist}"
+        >▶</button>
+
         <button class="song-btn-v2" onclick="addToLibrary(${song.id})">＋</button>
       </div>
     `;
 
     songsList.appendChild(songItem);
   });
+
+  document.querySelectorAll(".play-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      playSong(
+        button.dataset.audio,
+        button.dataset.title,
+        button.dataset.artist
+      );
+    });
+  });
 }
 
-function playSong(audioPath) {
+
+function playSong(audioPath, songTitle, songArtist) {
   const player = document.getElementById("audioPlayer");
+  const info = document.getElementById("searchStickyPlayerInfo");
+
   player.src = audioPath;
+  info.textContent = `${songTitle} - ${songArtist}`;
   player.play();
 }
 

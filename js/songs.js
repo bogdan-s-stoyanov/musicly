@@ -12,7 +12,7 @@ const songs = [
     title: "God's Plan",
     artist: "Drake",
     genre: "Hiphop",
-    audio: "songs/hip-hop/Drake - God's Plan.mp3",
+    audio: "songs/hip-hop/Drake - Gods Plan.mp3",
     image: "images/songs/hip-hop/God's plan.jpg"
   },
   {

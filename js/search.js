@@ -67,13 +67,13 @@ function addToLibrary(songId) {
   const alreadyExists = library.some(song => song.id === selectedSong.id);
 
   if (alreadyExists) {
-    alert(`${selectedSong.title} is already in your library.`);
+    showToast(`${selectedSong.title} is already in your library.`);
     return;
   }
 
   library.push(selectedSong);
   localStorage.setItem("library", JSON.stringify(library));
-  alert(`${selectedSong.title} added to library!`);
+  showToast(`${selectedSong.title} added to library!`);
 }
 
 function filterByGenre(genre) {

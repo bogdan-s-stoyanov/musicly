@@ -508,3 +508,177 @@ body {
     justify-content: flex-end;
   }
 }
+
+/* ЗА НИКОЛА*/
+.recognizer-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(214, 31, 31, 0.16), transparent 28%),
+    #000;
+  padding: clamp(28px, 8vh, 72px) 18px 40px;
+}
+
+.recognizer-shell {
+  width: min(100%, 520px);
+  margin: 0 auto;
+}
+
+.recognizer-card {
+  background: linear-gradient(180deg, #17171b 0%, #121216 100%);
+  border: 1px solid #24242b;
+  border-radius: 24px;
+  padding: clamp(20px, 4vw, 30px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.recognizer-title {
+  color: white;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.recognizer-subtitle {
+  color: #b0b0b8;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 0 22px;
+}
+
+.recognizer-label {
+  display: block;
+  color: #f3f3f5;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.recognizer-textarea {
+  width: 100%;
+  min-height: clamp(180px, 34vh, 260px);
+  background-color: #0f0f13;
+  color: white;
+  border: 1px solid #2a2a32;
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recognizer-textarea::placeholder {
+  color: #8e8e98;
+}
+
+.recognizer-textarea:focus {
+  outline: none;
+  border-color: #d61f1f;
+  box-shadow: 0 0 0 4px rgba(214, 31, 31, 0.14);
+}
+
+.recognizer-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.recognizer-back-btn,
+.recognizer-btn {
+  flex: 1;
+  min-height: 50px;
+  border-radius: 14px;
+  border: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.recognizer-back-btn {
+  background-color: #23232a;
+  color: white;
+}
+
+.recognizer-back-btn:hover {
+  background-color: #2d2d36;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.recognizer-btn {
+  background-color: #d61f1f;
+  color: white;
+}
+
+.recognizer-btn:hover {
+  background-color: #b91919;
+  transform: translateY(-1px);
+}
+
+.recognizer-result {
+  margin-top: 18px;
+}
+
+.hidden-result {
+  display: none;
+}
+
+.recognized-song-card {
+  background: linear-gradient(180deg, #17171b 0%, #121216 100%);
+  border: 1px solid #24242b;
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
+
+.recognized-song-image {
+  width: min(100%, 230px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.recognized-song-title {
+  color: white;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.recognized-song-artist {
+  color: #bcbcc4;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.recognizer-message {
+  color: #d0d0d6;
+  font-size: 1rem;
+  background: #17171b;
+  border: 1px solid #24242b;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .recognizer-actions {
+    flex-direction: column;
+  }
+}
+
+.recognizer-result-actions {
+  width: 100%;
+  margin-top: 18px;
+}

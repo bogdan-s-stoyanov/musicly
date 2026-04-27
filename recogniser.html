@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musicly - Song Recognizer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main class="recognizer-page">
+    <div class="recognizer-shell">
+
+      <div class="recognizer-card" id="recognizerFormCard">
+        <h1 class="recognizer-title">Song Recognizer</h1>
+        <p class="recognizer-subtitle">Paste part of the lyrics and let Musicly try to find the song.</p>
+
+        <label for="lyricsInput" class="recognizer-label">Lyrics</label>
+        <textarea
+          id="lyricsInput"
+          class="recognizer-textarea"
+          placeholder="Enter part of a song's lyrics..."
+        ></textarea>
+
+        <div class="recognizer-actions">
+          <a href="app.html" class="recognizer-back-btn">Go Back</a>
+          <button class="recognizer-btn" onclick="recognizeSong()">Recognize</button>
+        </div>
+      </div>
+
+      <div id="recognizerResult" class="recognizer-result hidden-result"></div>
+
+    </div>
+  </main>
+
+  <script src="js/songs.js"></script>
+  <script src="js/recognizer.js"></script>
+</body>
+</html>

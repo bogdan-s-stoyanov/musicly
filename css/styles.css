@@ -511,7 +511,6 @@ body {
   }
 }
 
-/* ЗА НИКОЛА*/
 .recognizer-page {
   min-height: 100vh;
   background:
@@ -721,7 +720,7 @@ body {
 }
 
 .toast-info {
-  border-left-color: #3b82f6;
+  border-left-color: #ef4444;
 }
 
 @media (max-width: 600px) {
